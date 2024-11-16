@@ -3,7 +3,7 @@
 
 
 
-
+This application is built using Ruby on Rails with Devise for user authentication, styled with Bootstrap and SCSS/CSS for responsive design enhanced by JavaScript, and powered by PostgreSQL for database management.
 
 ### Introduction & Objectives
 This book club application is designed to provide an interactive and user-friendly experience for those who love to read and share their passion for books with others. The app incorporates multi-model relationships, including a many-to-many connection, to facilitate key features such as joining or creating book clubs, tracking reading progress, writing reviews, and organizing club meetings. Users can also create personalized book lists and add favorite titles, making this app a comprehensive tool for book enthusiasts.
