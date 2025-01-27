@@ -1,2 +1,51 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<h1>Welcome to the Book Club</h1>
+
+<h2>Users</h2>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.email %></li>
+  <% end %>
+</ul>
+
+<h2>Books</h2>
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <strong><%= book.title %></strong><br>
+      <%= book.overview %><br>
+      <img src="<%= book.cover_url %>" alt="<%= book.title %> Cover" style="width: 100px;">
+    </li>
+  <% end %>
+</ul>
+
+<h2>Clubs</h2>
+<ul>
+  <% @clubs.each do |club| %>
+    <li><%= club.name %> (Created on: <%= club.created_date %>)</li>
+  <% end %>
+</ul>
+
+<h2>Meetings</h2>
+<ul>
+  <% @meetings.each do |meeting| %>
+    <li>
+      <%= meeting.club.name %> - <%= meeting.book.title %><br>
+      Location: <%= meeting.location %><br>
+      Date: <%= meeting.date %><br>
+      Status: <%= meeting.status %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Progress</h2>
+<ul>
+  <% @progresses.each do |progress| %>
+    <li>
+      <%= progress.user.email %> is reading "<%= progress.book.title %>" in the "<%= progress.club.name %>" club.<br>
+      Status: <%= progress.status %><br>
+      Last updated: <%= progress.progress_date %>
+    </li>
+  <% end %>
+</ul>

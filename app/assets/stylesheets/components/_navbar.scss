@@ -1,0 +1,53 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: $pink;
+  padding: auto 24px;
+  gap: 54px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 1px 0 0 #818181;
+
+  a {
+    color: $dark-blue;
+  }
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+  margin-right: 32px;
+
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.navbar-lewagon .nav-item {
+  margin-left: 16px; /* Space out navigation items */
+}
+
+#search {
+  position: absolute;
+  bottom: 5px;
+  right: 250px;
+  // right: 40%;
+  transform: translateX(-50%); /* Center it horizontally */
+  display: flex;
+  align-items: center;
+  input {
+    border-radius: 20px;
+    box-shadow: inset 0 -6px 6px -3px rgba(0, 0, 0, 0.4);
+    border: 1px $pink;
+  }
+}
+
+
+ .dropdown {
+  a {
+
+    background: $dark-blue;
+    color: $pink;
+  }
+}

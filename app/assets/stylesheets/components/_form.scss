@@ -1,0 +1,124 @@
+#form-new {
+  color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+  max-width: 550px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #59495ce6;
+
+
+  a {
+
+    color: rgb(211, 211, 211);
+  }
+  h2 {
+
+    text-align: center;
+  }
+  .btn {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 28px;
+    color: $dark-blue;
+    font-weight: 600;
+    letter-spacing: -1px;
+
+    align-items: center;
+    padding-left: 30px;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      left: 0;
+    }
+
+    &::after {
+      animation: pulse 1s linear infinite;
+    }
+  }
+
+
+  .message,
+  .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .form label {
+    text-align: left;
+
+    .input {
+
+      width: 100%;
+      padding: 10px;
+      border: 1px solid rgba(105, 105, 105, 0.397);
+      border-radius: 10px;
+      outline: 0;
+    }
+
+    .input + span {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+
+      font-size: 0.9em;
+      cursor: text;
+      transition: 0.3s ease;
+    }
+
+    .input:focus + span,
+    .input:valid + span {
+      top: 30px;
+      font-size: 0.7em;
+      font-weight: 600;
+    }
+
+    .input:valid + span {
+      color: green;
+    }
+  }
+
+  .submit {
+    border: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(56, 90, 194);
+    }
+  }
+
+
+}
+
+.form-control {
+  color: #130910;
+}
+
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
