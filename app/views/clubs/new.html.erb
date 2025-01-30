@@ -1,0 +1,7 @@
+
+<h3>Create your own reading room</h3>
+
+<%= simple_form_for @club do |f| %>
+<%= f.input :name, placeholder: 'Give it a unique name' %>
+<%= f.submit class: 'btn btn-flat' %>
+<% end %>
