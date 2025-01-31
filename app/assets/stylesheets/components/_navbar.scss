@@ -1,32 +1,96 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
-  background: $pink;
+  // background: $pink;
   padding: auto 24px;
+  padding-bottom: 10px;
   gap: 54px;
-  align-items: center;
+  display: flex;
+  align-items: flex-end;
   text-align: center;
   box-shadow: 0 1px 0 0 #818181;
-
+  box-shadow: inset 1em 1em 10px 0px #81818173;
+  border-bottom: solid 5px #4b4541;
   a {
-    color: $dark-blue;
+    // color: $dark-blue;
   }
 }
+.bookshelf{
+  justify-content: space-evenly;
+  display: flex;
+  gap: 1px;
+  align-items: flex-end;
+}
+.ro {
+  transform: rotate(20deg); /* Rotates the element by 30 degrees */
+  transform-origin: center;
+  margin: 0 5%;
+}
 
-.navbar-lewagon .navbar-collapse {
+
+.book-s{
+  height: 35px;
+
+  border: solid 5px #3A5154;
+  box-shadow: 2px -4px 3px 3px rgba(58, 58, 58, 0.2);
+}
+.book-m{
+  height: 45px;
+  border: solid 7px #3A5154;
+  box-shadow: 2px -4px 3px 3px rgba(58, 58, 58, 0.2);
+}
+.book-l{
+  height: 50px;
+  border: solid 5px #3A5154;
+  box-shadow: 2px -4px 3px 3px rgba(58, 58, 58, 0.2);
+}
+.gap {
+  width: 30px;
+}
+
+
+.ro90 {
+  width: 40px;
+  margin-top: 2px;
+  border: solid 5px #3A5154;
+  box-shadow: 2px -4px 3px 3px rgba(58, 58, 58, 0.2);
+
+}
+
+.books-toggler {
+
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    // width: 40px;
+    gap: 5px;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+.navbar .navbar-collapse {
   flex-grow: 0;
   margin-right: 32px;
 
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar .navbar-brand img {
+  // width: 40px;
   height: 40px;
-  border-radius: 20px;
+  // border-radius: 20px;
 }
 
-.navbar-lewagon .nav-item {
+.navbar .nav-item {
   margin-left: 16px; /* Space out navigation items */
 }
+
 
 #search {
   position: absolute;
@@ -39,15 +103,15 @@
   input {
     border-radius: 20px;
     box-shadow: inset 0 -6px 6px -3px rgba(0, 0, 0, 0.4);
-    border: 1px $pink;
+    // border: 1px $pink;
   }
 }
 
 
- .dropdown {
-  a {
+.dropdown {
+a {
 
-    background: $dark-blue;
-    color: $pink;
-  }
+  // background: $dark-blue;
+  // color: $pink;
+}
 }
