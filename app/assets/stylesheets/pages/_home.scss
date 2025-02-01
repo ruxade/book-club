@@ -1,0 +1,33 @@
+#home-about  {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding: 10%;
+font-size: medium;
+
+}
+
+
+.container-home img {
+  // position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the image covers the entire screen */
+  z-index: -1; /* Keeps it behind other content */
+}
+
+.container-home {
+  // position: fixed;
+  background-color: #19262d;
+  // top: 50px;
+  left: -1px;
+  width: 100vw;
+  // height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
