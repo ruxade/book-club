@@ -1,0 +1,25 @@
+<h2><%= @book[:title] %></h2>
+
+
+<div class="book-details">
+  <div class="book-cover">
+<% if @book[:cover_url] %>
+  <img src="<%= @book[:cover_url] %>" alt="<%= @book[:title] %>" width="200">
+<% end %>
+</div>
+
+ <div class="book-metadata">
+<p><strong>Author:</strong> <%= @book[:authors] %></p>
+<p><strong>Published:</strong> <%= @book[:publication_year] %></p>
+<p><strong>Pages:</strong> <%= @book[:page_count] %></p>
+<p><strong>Categories:</strong> <%= @book[:categories] %></p>
+<p><strong>Rating:</strong> <%= @book[:average_rating] %> / 5</p>
+</div>
+
+<div class="book-overview">
+<p><%= @book[:overview] %></p>
+  </div>
+  
+<%= link_to "Back to Search", books_path %>
+
+</div>

@@ -1,6 +1,31 @@
 <h1>Books</h1>
-<ul>
-  <% @books.each do |book| %>
-    <li><%= book.title %></li>
-  <% end %>
-</ul>
+
+<h2>Search for Books</h2>
+
+<%= form_with url: books_path, method: :get, local: true do %>
+  <input type="text" name="query" placeholder="Enter book title..." value="<%= params[:query] %>">
+  <button type="submit">Search</button>
+<% end %>
+
+<% if @books.any? %>
+  <h3>Search Results</h3>
+  <ul>
+    <% @books.each do |book| %>
+      <li>
+        <strong><%= book[:title] %></strong> - <%= book[:authors] %>
+        <p><strong>Published:</strong> <%= book[:publication_year] %></p>
+        <p><strong>Pages:</strong> <%= book[:page_count] %></p>
+        <p><strong>Categories:</strong> <%= book[:categories] %></p>
+        <p><strong>Rating:</strong> <%= book[:average_rating] %> / 5</p>
+        <% if book[:cover_url] %>
+          <img src="<%= book[:cover_url] %>" width="100">
+        <% end %>
+        <br>
+        <%= link_to "View Details", book_path(book[:google_id]) %>
+
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No books found. Try searching above!</p>
+<% end %>

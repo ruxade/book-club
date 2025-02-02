@@ -1,0 +1,12 @@
+<h2><%= @list.name %></h2>
+
+<ul>
+  <% @list.list_books.each do |book| %>
+    <li>
+      <strong><%= book.title %></strong> - <%= book.author %>
+      <img src="<%= book.cover_url %>" width="100">
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back to Lists", lists_path class: "btn btn-primary " %>
