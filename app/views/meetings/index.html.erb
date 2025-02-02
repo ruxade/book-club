@@ -1,12 +1,15 @@
-<h1>Meetings</h1>
-<ul>
-  <% @meetings.each do |meeting| %>
-    <li>
-      <strong>Book:</strong> <%= meeting.book.title %><br>
-      <strong>Club:</strong> <%= meeting.club.name %><br>
-      <strong>Location:</strong> <%= meeting.location %><br>
-      <strong>Date:</strong> <%= meeting.date.strftime("%B %d, %Y") %><br>
-      <strong>Status:</strong> <%= meeting.status %>
-    </li>
-  <% end %>
-</ul>
+<div class="meetings-container">
+  <h2 class="page-title">Meetings</h2>
+
+  <div class="meetings-list">
+    <% @meetings.each do |meeting| %>
+      <div class="meeting-card">
+        <div class="meeting-info">
+          <p class="book-title"><%= meeting.book.title.upcase %></p>
+          <p class="date"><%= meeting.date.strftime("%d/%m/%y") %></p>
+        </div>
+        <div class="circle"></div> <!-- White circle on the right -->
+      </div>
+    <% end %>
+  </div>
+</div>

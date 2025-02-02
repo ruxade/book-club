@@ -1,0 +1,39 @@
+/* Meetings Page */
+.meeting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #b5c7b3; /* Soft green background */
+}
+
+.meeting-show-card {
+  width: 90%;
+  padding: 1.5rem;
+  border-radius: 15px;
+  // background: white;
+  // box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.book-cover{
+width: 20%;
+
+}
+.notes-section {
+  margin-top: 1.5rem;
+  background: #f8f4ed;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cover-circle {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}

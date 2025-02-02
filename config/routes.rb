@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     delete "remove_user", on: :member
   end
   resources :books, only: [:index, :new, :create]
-  resources :meetings, only: [:index]
+  resources :meetings, only: [:index,:new, :create, :show]
 
   # Defines the root path route ("/")
   # root "posts#index"

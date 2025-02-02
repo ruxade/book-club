@@ -1,0 +1,24 @@
+
+/* TBR List Page */
+.tbr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #e8e2d5; /* Neutral background */
+}
+
+.tbr-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tbr-card {
+  width: 90%;
+  padding: 1rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: -1rem; /* Overlapping effect */
+}

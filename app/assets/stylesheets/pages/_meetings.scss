@@ -1,0 +1,76 @@
+.meetings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #e5e5e5;
+  min-height: 100vh;
+}
+
+
+
+.meetings-list {
+  // width: 90%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.meeting-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #d1d1d1, #f0f0f0);
+  box-shadow: 4px 6px 13px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 250px;
+  position: relative;
+  transition: 0.3s;
+
+
+  &:nth-child(n) {
+    margin-bottom: -30px; // Creates the overlapping effect
+    z-index: calc(100 - var(--i)); // Higher index for first card
+  }
+
+  &:first-child {
+    z-index: 100; // Ensure the first card is on top
+  }
+}
+
+// Dynamic background colors
+// .meeting-card:nth-child(1) { background: #9fa8c8; } // Light blue
+// .meeting-card:nth-child(2) { background: #c9a774; } // Beige
+// .meeting-card:nth-child(3) { background: #b07c50; } // Brown
+// .meeting-card:nth-child(4) { background: #e2b24c; } // Yellow
+
+.meeting-card:nth-child(4n+1) { background: #9fa8c8; } // Light blue
+.meeting-card:nth-child(4n+2) { background: #c9a774; } // Beige
+.meeting-card:nth-child(4n+3) { background: #b07c50; } // Brown
+.meeting-card:nth-child(4n+4) { background: #e2b24c; } // Yellow
+
+.meeting-info {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.date {
+  font-size: 0.9rem;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
