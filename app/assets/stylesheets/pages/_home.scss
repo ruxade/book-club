@@ -10,12 +10,12 @@ font-size: medium;
 
 .container-home img {
   // position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* Ensures the image covers the entire screen */
-  z-index: -1; /* Keeps it behind other content */
+  // height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .container-home {
@@ -30,4 +30,39 @@ font-size: medium;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
+
+  h1 {
+
+  }
+}
+
+
+#title {
+  // padding-top: 50px;
+  // position: absolute;
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;  // Vertical centering
+  justify-content: center;  // Horizontal centering
+
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #E6B833; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end) infinite alternate, blink .5s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #E6B833 }
 }
