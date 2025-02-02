@@ -20,7 +20,7 @@ font-size: medium;
 
 .container-home {
   // position: fixed;
-  background-color: #19262d;
+  background-color: $bg-blue;
   // top: 50px;
   left: -1px;
   width: 100vw;
@@ -47,7 +47,7 @@ font-size: medium;
 
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #E6B833; /* The typwriter cursor */
+  border-right: .15em solid $yellow; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
@@ -64,5 +64,5 @@ font-size: medium;
 /* The typewriter cursor effect */
 @keyframes blink {
   from, to { border-color: transparent }
-  50% { border-color: #E6B833 }
+  50% { border-color: $yellow }
 }
