@@ -16,8 +16,9 @@ Rails.application.routes.draw do
   resources :books, only: [:index, :show]
   resources :meetings, only: [:index,:new, :create, :show]
   resources :lists do
-    post "add_book", on: :member
+    resources :list_books, only: [:create, :destroy]
   end
+
   # Defines the root path route ("/")
   # root "posts#index"
 end

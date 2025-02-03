@@ -10,17 +10,28 @@
 
 }
 
+.btn {
+  min-width: 140px;
+    min-height: 40px;
+    border-radius: 20px;
+    box-shadow: 4px 6px 13px rgba(0, 0, 0, 0.2);
+    border: 0px solid rgba(105, 105, 105, 0.397);
+}
 .btn-primary {
-  background-color: $dark-blue;
-  color: $gray;
+  background-color: $purple;
+  color: black;
+
 }
 
 .btn-secondary {
-  background-color: $primary;
-  color: $gray;
+  background-color: $bg-green;
+  color: black;
+
 }
+
 
 .btn-delete {
   background-color: $light-blue;
   color: $gray;
+
 }

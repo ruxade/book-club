@@ -1,12 +1,15 @@
 @import "home";
 @import "meetings";
 @import "meeting_show";
+@import "lists";
+@import "list_show";
 
 
 
 .page-title {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 900;
   text-transform: uppercase;
-  margin: 80px 0px;
+  margin: 25px 0px;
+
 }

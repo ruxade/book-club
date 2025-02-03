@@ -1,12 +1,13 @@
 class ListsController < ApplicationController
-  before_action :authenticate_user!  # only logged-in users can manage lists
+  before_action :authenticate_user!
 
   def index
-    @lists = current_user.lists
+    @lists = current_user.lists.includes(:books)
   end
 
   def show
     @list = current_user.lists.find(params[:id])
+    @books = @list.books  # Fetch books associated with the list
   end
 
   def new
@@ -18,22 +19,8 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to lists_path, notice: "List created successfully!"
     else
+      flash.now[:alert] = "Error creating list. Please try again."
       render :new
-    end
-  end
-
-  def add_book
-    @list = current_user.lists.find(params[:list_id])
-    book = @list.list_books.find_or_create_by(book_id: params[:book_id]) do |b|
-      b.title = params[:title]
-      b.author = params[:author]
-      b.cover_url = params[:cover_url]
-    end
-
-    if book.persisted?
-      redirect_to @list, notice: "Book added to list!"
-    else
-      redirect_to @list, alert: "Error adding book."
     end
   end
 

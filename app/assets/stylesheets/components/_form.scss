@@ -1,51 +1,29 @@
-#form-new {
-  
+.form-new {
+
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   gap: 20px;
   max-width: 550px;
   padding: 50px;
-  border-radius: 20px;
-  background-color: #59495ce6;
+  height: 100vh;
+  background-color: $bg-green;
 
+.input-box {
 
-  a {
+  width: 100%;
+  padding: 10px;
+  border: 0px solid rgba(105, 105, 105, 0.397);
+  border-radius: 50px;
+  outline: 0;
+}
 
-    color: rgb(211, 211, 211);
-  }
-  h2 {
-
+  .btn-cto {
+    border-radius: 20px;
     text-align: center;
   }
-  .btn {
-    text-align: center;
-  }
 
-  .title {
-    font-size: 28px;
-    color: $dark-blue;
-    font-weight: 600;
-    letter-spacing: -1px;
 
-    align-items: center;
-    padding-left: 30px;
-    position: relative;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      left: 0;
-    }
-
-    &::after {
-      animation: pulse 1s linear infinite;
-    }
-  }
 
 
   .message,
@@ -63,7 +41,7 @@
       width: 100%;
       padding: 10px;
       border: 1px solid rgba(105, 105, 105, 0.397);
-      border-radius: 10px;
+      border-radius: 50px;
       outline: 0;
     }
 

@@ -1,0 +1,85 @@
+.list-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // padding: 20px;
+  min-height: 100vh;
+}
+
+
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+  margin: 40px 0; /* Adds space between list items */
+  border-radius: 15px;
+  // background: #fff;
+  box-shadow:1px -10px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  min-width: 330px; /* Controls the width of each list item */
+  min-height: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+
+
+  &:nth-child(n+2) { // All except the first card
+    margin-top: -80px; // Overlapping effect
+  }
+
+
+  /* Books count display */
+ p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #555; /* Soft text color */
+}
+ a {
+  text-decoration: none;
+
+  font-size: 1.1rem;
+  margin: 5px 0;
+  padding: 8px;
+  // background-color: #4e4e4eb4; /* Soft text color */
+  border: 1px solid #4e4e4eb4;
+  color: #4e4e4eb4;
+  border-radius: 20px;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+h3{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+}
+
+/* Add subtle hover effect on list item */
+.list-item:hover {
+  transform: translateY(-10px);
+  // box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Dynamic background colors for different list types */
+.list-item:nth-child(4n+1) {
+  background: #e2b24c; /* Yellow */
+}
+.list-item:nth-child(4n+2) {
+  background: #c9a774; /* Beige */
+}
+.list-item:nth-child(4n+3) {
+  background: #b07c50; /* Brown */
+}
+.list-item:nth-child(4n+4) {
+
+  background: #9fa8c8; /* Light blue */
+}
+
+/* Link to view the list */

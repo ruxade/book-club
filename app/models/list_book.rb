@@ -1,7 +1,4 @@
-class List < ApplicationRecord
-  belongs_to :user  # Ensures lists belong to users
-  has_many :list_books, dependent: :destroy
-  has_many :books, through: :list_books
-
-  validates :name, presence: true
+class ListBook < ApplicationRecord
+  belongs_to :list
+  belongs_to :book
 end
