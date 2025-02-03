@@ -28,15 +28,26 @@
         <div class="book-info">
           <h4><%= book[:title] %></h4>
           <p><strong>Author:</strong> <%= book[:authors] %></p>
-          <p><strong>Published:</strong> <%= book[:publication_year] %></p>
-          <p><strong>Rating:</strong> <%= book[:average_rating] %> / 5</p>
+                    <p>Published: <%= book[:publication_year] %></p>
+           <% if book[:average_rating].present? && book[:average_rating] != "No rating"  %>
+           <p> <strong>Rating:</strong> <%= book[:average_rating] %> / 5</p>
+           <% end %>
           <%= link_to "View Details", book_path(book[:google_id]), class: "view-details" %>
         </div>
       </div>
     <% end %>
   </div>
 <% else %>
-  <p>No books found. Try searching above!</p>
+  <p>No books yet. Try searching above!</p>
+  <div class="stacked-container">
+        <div class="stacked-item item1"></div>
+        <div class="stacked-item item2"></div>
+        <div class="stacked-item item3"></div>
+        <div class="stacked-item item4"></div>
+        <div class="stacked-item item5"></div>
+        <div class="stacked-item item6"></div>
+        <div class="stacked-item item7"></div>
+    </div>
 <% end %>
 
 </div>

@@ -1,0 +1,62 @@
+
+.stacked-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between each block */
+  padding: 20px;
+  // background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.stacked-item {
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.stacked-book-info {
+  text-align: center;
+  padding: 10px;
+}
+/* Different background colors for each block */
+.item1 {
+  background-color: #d1e2d7; /* Light Green */
+  width: 190px;
+}
+
+.item2 {
+  background-color: #f4e1c1; /* Light Beige */
+  width: 140px;
+}
+
+.item3 {
+  background-color: #a9856b; /* Light Brown */
+  width: 220px;
+}
+
+.item4 {
+  background-color: #6d8c7f; /* Medium Green */
+  width: 200px;
+}
+
+.item5 {
+  background-color: #9aa8c8; /* Light Blue */
+  width: 180px;
+}
+
+.item6 {
+  background-color: #e9c5a1; /* Light Yellow */
+  width: 220px;
+}
+
+.item7 {
+  background-color: #f5c23d; /* Orange */
+  width: 250px;
+}

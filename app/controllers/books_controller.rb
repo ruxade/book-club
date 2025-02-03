@@ -4,6 +4,8 @@ def index
   if params[:query].present?
     @books = GoogleBooksService.search_books(params[:query])
   else
+    # @top_rated_books = @books.order(average_rating: :desc).limit(7) # Fetch top 7 rated books
+
     @books = [] # No books are loaded until a search is performed
   end
 end

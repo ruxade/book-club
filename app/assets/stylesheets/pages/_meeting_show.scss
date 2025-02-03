@@ -1,11 +1,5 @@
 /* Meetings Page */
-.meeting-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background-color: #b5c7b3; /* Soft green background */
-}
+
 
 .meeting-show-card {
   width: 90%;
@@ -23,10 +17,10 @@
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  width: 120%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
 }
 
 .cover-circle {

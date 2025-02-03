@@ -3,6 +3,7 @@
 @import "meeting_show";
 @import "lists";
 @import "list_show";
+@import "book_show";
 
 
 
@@ -21,4 +22,13 @@
   background-color: $bg-light;
   min-height: 100vh;
   padding-top: 50px;
+}
+
+
+.show-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #b5c7b3; /* Soft green background */
 }
