@@ -7,9 +7,18 @@
 
 
 .page-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
   margin: 25px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+
+.books-page{
+  background-color: $bg-light;
+  min-height: 100vh;
+  padding-top: 50px;
 }

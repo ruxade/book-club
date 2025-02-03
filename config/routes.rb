@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     post "add_user", on: :member
     delete "remove_user", on: :member
   end
-  resources :books, only: [:index, :show]
+  resources :books,param: :google_id, only: [:index, :show]
   resources :meetings, only: [:index,:new, :create, :show]
   resources :lists do
     resources :list_books, only: [:create, :destroy]

@@ -1,4 +1,9 @@
-<h1>Books</h1>
+<div class ="books-page">
+
+
+<h1 class="page-title">Books</h1>
+
+<div class="books-index">
 
 <h2>Search for Books</h2>
 
@@ -7,25 +12,32 @@
   <button type="submit">Search</button>
 <% end %>
 
-<% if @books.any? %>
-  <h3>Search Results</h3>
-  <ul>
-    <% @books.each do |book| %>
-      <li>
-        <strong><%= book[:title] %></strong> - <%= book[:authors] %>
-        <p><strong>Published:</strong> <%= book[:publication_year] %></p>
-        <p><strong>Pages:</strong> <%= book[:page_count] %></p>
-        <p><strong>Categories:</strong> <%= book[:categories] %></p>
-        <p><strong>Rating:</strong> <%= book[:average_rating] %> / 5</p>
-        <% if book[:cover_url] %>
-          <img src="<%= book[:cover_url] %>" width="100">
-        <% end %>
-        <br>
-        <%= link_to "View Details", book_path(book[:google_id]) %>
 
-      </li>
+<% if @books.any? %>
+  <h3 style="  display: flex; align-items: center; justify-content: center; padding:10%;">Search Results:</h3>
+  <div class="books-container">
+    <% @books.each do |book| %>
+      <div class="book-card">
+        <div class="book-cover">
+          <% if book[:cover_url] %>
+            <img src="<%= book[:cover_url] %>" alt="<%= book[:title] %> cover" class="book-image">
+          <% else %>
+            <div class="book-image-placeholder"></div>
+          <% end %>
+        </div>
+        <div class="book-info">
+          <h4><%= book[:title] %></h4>
+          <p><strong>Author:</strong> <%= book[:authors] %></p>
+          <p><strong>Published:</strong> <%= book[:publication_year] %></p>
+          <p><strong>Rating:</strong> <%= book[:average_rating] %> / 5</p>
+          <%= link_to "View Details", book_path(book[:google_id]), class: "view-details" %>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 <% else %>
   <p>No books found. Try searching above!</p>
 <% end %>
+
+</div>
+</div>
