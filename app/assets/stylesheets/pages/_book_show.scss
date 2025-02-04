@@ -20,7 +20,12 @@
 
 #book-overview{
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-  // padding: 0 20px;
+  background-color: $bg-light;
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 120%;
+  padding: 20 20px;
   // display: block;
   // text-align: left;
 }

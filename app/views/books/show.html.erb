@@ -25,7 +25,7 @@
 <p><strong>Author:</strong> <%= @book[:authors] %></p>
 <p><strong>Published:</strong> <%= @book[:publication_year] %></p>
 <p><strong>Pages:</strong> <%= @book[:page_count] %></p>
-<p><strong>Categories:</strong> <%= @book[:categories] %></p>
+<p><strong>Categories:</strong> <%= @book[:categories].split("/ ").take(5).join(", ") %></p>
 <p><strong>Rating:</strong> <%= @book[:average_rating] %> / 5</p>
 </div>
 
@@ -36,7 +36,10 @@
       <%= raw @book[:overview] %>
     </div>
   </div>
+</div>
 
+<div class = "container mt-4">
+  <h2>Reviews</h2>
 </div>
 
 </div>
