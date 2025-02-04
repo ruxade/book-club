@@ -8,6 +8,11 @@ This application is built using Ruby on Rails with Devise for user authenticatio
 ### Introduction & Objectives
 This book club application is designed to provide an interactive and user-friendly experience for those who love to read and share their passion for books with others. The app incorporates multi-model relationships, including a many-to-many connection, to facilitate key features such as joining or creating book clubs, tracking reading progress, writing reviews, and organizing club meetings. Users can also create personalized book lists and add favorite titles, making this app a comprehensive tool for book enthusiasts.
 
+[View the Figma Design](https://www.figma.com/proto/bKQvW31TGEHLNyTV7cl756/BookClub?node-id=0-1&t=qxBuA6P39cvXubDS-1)
+
+![image](https://github.com/user-attachments/assets/145fab84-9632-44a8-aa51-a879c24f3f4a)
+
+
 
 ### Schema
 ![](db/schema.dio.png)
