@@ -10,11 +10,11 @@
 
 
 .list-item {
-  display: flex;
+  // display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   font-weight: bold;
   margin: 40px 0; /* Adds space between list items */
   border-radius: 15px;
@@ -24,7 +24,13 @@
   min-width: 330px; /* Controls the width of each list item */
   min-height: 200px;
   text-align: center;
+
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+
 
 
 
@@ -39,24 +45,21 @@
   margin: 5px 0;
   color: #555; /* Soft text color */
 }
- a {
-  text-decoration: none;
 
-  font-size: 1.1rem;
-  margin: 5px 0;
-  padding: 8px;
-  // background-color: #4e4e4eb4; /* Soft text color */
-  border: 1px solid #4e4e4eb4;
-  color: #4e4e4eb4;
-  border-radius: 20px;
-  width: 120px;
-  align-items: center;
-  justify-content: center;
-}
 h3{
+  padding: 10px;
+
   font-size: 1.1rem;
   font-weight: 600;
 }
+h1{
+  padding: 15px;
+  border: 1px solid #4e4e4eb4;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
 
 }
 
