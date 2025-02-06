@@ -43,7 +43,7 @@ class ListsController < ApplicationController
     redirect_to lists_path, notice: 'List deleted successfully'
   end
 
-  
+
   private
 
   def list_params
