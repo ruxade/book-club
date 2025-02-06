@@ -1,15 +1,24 @@
 <div class="meetings-container">
   <h2 class="page-title">Meetings</h2>
 
-  <div class="meetings-list">
-    <% @meetings.each do |meeting| %>
-      <div class="meeting-card">
-        <div class="meeting-info">
-          <p class="book-title"><%= meeting.book.title.upcase %></p>
-          <p class="date"><%= meeting.date.strftime("%d/%m/%y") %></p>
-        </div>
-        <div class="circle"></div> <!-- White circle on the right -->
+<div class="meetings-list">
+  <% @meetings.each do |meeting| %>
+    <div class="meeting-card">
+      <div class="meeting-info">
+        <p class="book-title"><%= meeting.book.title.upcase %></p>
+        <p class="date"><%= meeting.date.strftime("%d/%m/%y") %></p>
+      <!-- Show button to go to the meeting's show page -->
+      <%= link_to 'More', meeting_path(meeting), class: 'btn btn-secondary' %>
       </div>
-    <% end %>
-  </div>
+
+
+      <!-- White circle on the right -->
+      <div class="circle">
+        <img src="<%= meeting.book.cover_url %>" >
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
 </div>

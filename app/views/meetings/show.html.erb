@@ -1,24 +1,23 @@
 <!-- Club Meeting SHOW Page -->
 
 <div class="show-container">
-  <div class="cover-circle"></div>
+  <div class="cover-circle"><img src="<%= @meeting.book.cover_url %>" ></div>
   <h2 class="page-title"><%= @meeting.book.title %></h2>
 
   <div class="meeting-show-card">
-    <div class="meeting-details">
-      <p>Date: <span>XX/XX/XXXX</span></p>
-      <p>Ratings: <span>XX%</span></p>
-      <div class="book-info">
-        <div class="book-cover"></div> <!-- Placeholder for book cover -->
-        <div class="book-meta">
-          <p>Title: <%= @meeting.book.title %></p>
-          <p>Author: <%= @meeting.book.title %></p>
-          <p>First Published</p>
-          <p>Date Added</p>
-          <p>Rating</p>
-        </div>
-      </div>
-    </div>
+
+<h1>Club Meeting Details</h1>
+
+<p><strong>Book:</strong> <%= @meeting.book.title %></p>
+<p><strong>Club:</strong> <%= @meeting.club.name %></p>
+<p><strong>Location:</strong> <%= @meeting.location %></p>
+<p><strong>Date:</strong> <%= @meeting.date.strftime("%B %d, %Y at %I:%M %p") %></p>
+<p><strong>Status:</strong> <%= @meeting.status %></p>
+
+<div class="buttons">
+<%= link_to 'Back to Meetings', meetings_path , class: "btn btn-primary"%>
+</div>
+
   </div>
   <div class="notes-section">
     <h3>Notes</h3>

@@ -2,7 +2,8 @@ class ListsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @lists = current_user.lists.includes(:books)
+    @lists = current_user.lists
+    # @lists = current_user.lists.includes(:books)
   end
 
   def show

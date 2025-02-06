@@ -3,7 +3,7 @@
 
 .meeting-show-card {
   width: 90%;
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-radius: 15px;
   // background: white;
   // box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -18,16 +18,22 @@
   border-radius: 20px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   width: 120%;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .cover-circle {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   margin-top: 50px;
   background: white;
   border-radius: 50%;
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: cover;
+  overflow: hidden;
+  img{
+    width: 100%;
+
+  }
 }

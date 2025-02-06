@@ -8,6 +8,17 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+# db/seeds.rb
+
+
+
+# Clear existing records
+UserClub.destroy_all
+List.destroy_all
+User.destroy_all
+Club.destroy_all
+Meeting.destroy_all
+puts "Users, Lists, Clubs, and Meetings destroyed"
 
 # Create Users
 users = User.create([
@@ -17,45 +28,90 @@ users = User.create([
   { email: 'anna@example.com', password: 'password' },
   { email: 'xiao@example.com', password: 'password' }
 ])
-puts 'users created'
+puts 'Users created'
 
-# Create Books
-book_1 = Book.create(title: 'A Little Life',
-cover_url: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1446469353i/22822858.jpg',
- overview: 'An emotional novel about friendship and trauma.')
-book_2 = Book.create(title: 'The Seven Husbands of Evelyn Hugo',
- cover_url: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1556639327i/45416596.jpg',
-  overview: 'A glamorous, tragic tale of a Hollywood star and her seven marriages.')
-
-# Create a Club
+# CLUB
 club = Club.create(name: 'The Book Club', created_date: DateTime.now)
 
 # Add Users to Club
 users.each do |user|
   UserClub.create(user: user, club: club)
 end
+puts 'Club created'
 
-puts 'club created'
+# Fetch books from Google Books API
+book_3_data = GoogleBooksService.search_books("White Nights").first
+book_2_data = GoogleBooksService.search_books("The Seven Husbands of Evelyn Hugo").first
+book_1_data = GoogleBooksService.search_books("A Little Life").first
 
-# Create Meetings
-meeting_1 = Meeting.create(
-  book: book_1,
+# Ensure the books have been fetched correctly before proceeding
+if book_1_data && book_2_data && book_3_data
+  # Create Book records using symbol-based keys
+  book_1_record = Book.create(
+    title: book_1_data[:title], # Use the symbol-based key
+    authors: book_1_data[:authors], # Joining authors if it's an array
+    cover_url: book_1_data[:cover_url],
+    overview: book_1_data[:overview],
+    google_id: book_1_data[:google_id]
+  )
+
+  book_2_record = Book.create(
+    title: book_2_data[:title],
+    authors: book_2_data[:authors],
+    cover_url: book_2_data[:cover_url],
+    overview: book_2_data[:overview],
+    google_id: book_2_data[:google_id]
+  )
+
+  book_3_record = Book.create(
+    title: book_3_data[:title],
+    authors: book_3_data[:authors],
+    cover_url: book_3_data[:cover_url],
+    overview: book_3_data[:overview],
+    google_id: book_3_data[:google_id]
+  )
+  puts 'Books created'
+else
+  puts 'Error: Failed to fetch book data'
+end
+
+# Create Meetings with Book Data
+meeting_4 = Meeting.create(
+  book: book_3_record,
   club: club,
-  location: 'Room 101',
-  date: DateTime.now + 7.days,
+  location: 'The Institute Bar',
+  date: DateTime.new(2024, 7, 24),
+  status: 'Scheduled'
+)
+
+meeting_3 = Meeting.create(
+  book: book_2_record,
+  club: club,
+  location: 'Nenno',
+  date: DateTime.new(2024, 5, 3),
   status: 'Scheduled'
 )
 
 meeting_2 = Meeting.create(
-  book: book_2,
+  book: book_1_record,
   club: club,
-  location: 'Room 102',
-  date: DateTime.now + 14.days,
+  location: 'Brewdog Waterloo',
+  date: DateTime.new(2024, 1, 19),
   status: 'Scheduled'
 )
 
-puts 'meetings created'
-# Create Progresses (Example)
+meeting_1 = Meeting.create(
+  book: book_1_record,
+  club: club,
+  location: 'The Institute Bar',
+  date: DateTime.new(2023, 10, 25),
+  status: 'Scheduled'
+)
+
+puts 'Meetings created'
+
+
+# Create Progresses
 # users.each do |user|
 #   Progress.create(
 #     user: user,

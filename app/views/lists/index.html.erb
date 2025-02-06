@@ -16,11 +16,24 @@
 
 <div class="list-index">
 
+  <%# <% @lists.each do |list| %>
+  <%# <div class="list-item"> %>
+    <%# <h3><%= list.name</h3> %>
+    <%# <h1><%= list.books.count</h1> %>
+    <%# <%= link_to list_path(list), class: "btn btn-primary" do %>
+      <%# View List %>
+    <%# <% end %>
+  <%# </div> %>
+<%# <% end %>
+
   <div class="list-item">
     <h3>TBA List </h3>
     <h1> 8 </h1>
-
+     <%= link_to list_path(list), class: "btn btn-primary" do %>
+    View List
+  <% end %>
   </div>
+
   <div class="list-item">
     <h3>Read List</h3>
     <h1> 8 </h1>

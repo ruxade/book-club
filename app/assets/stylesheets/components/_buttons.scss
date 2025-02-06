@@ -11,27 +11,35 @@
 }
 
 .btn {
-  min-width: 140px;
+  min-width: 100px;
     min-height: 40px;
     border-radius: 20px;
     box-shadow: 4px 6px 13px rgba(0, 0, 0, 0.2);
     border: 0px solid rgba(105, 105, 105, 0.397);
 }
 .btn-primary {
-  background-color: $purple;
-  color: black;
+  background-color: $accent3;
+  color: white;
 
 }
 
 .btn-secondary {
-  background-color: $bg-green;
-  color: black;
+  background-color: $accent2;
+  color: $text;
 
 }
 
 
 .btn-delete {
-  background-color: $light-blue;
-  color: $gray;
+  background-color: $accent3;
+  color: black;
 
+}
+
+input {
+  box-shadow: inset 0px -5px 10px rgba(0, 0, 0, 0.3);
+  border: 0px solid rgba(105, 105, 105, 0.397);
+  border-radius: 20px;
+  min-height: 40px;
+  padding: 5px;
 }

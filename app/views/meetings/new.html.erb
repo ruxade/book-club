@@ -2,6 +2,49 @@
   <div  class="row justify-content-center">
     <div  class="col-12 col-lg-6">
 
+
+<%= form_with model: @meeting, local: true do |form| %>
+  <% if @meeting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
+      <ul>
+        <% @meeting.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.select :book_id, Book.all.collect { |book| [book.title, book.id] }, prompt: "Select Book" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :club_id %>
+    <%= form.select :club_id, Club.all.collect { |club| [club.name, club.id] }, prompt: "Select Club" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_local_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
 </div>
 </div>
 </div>
