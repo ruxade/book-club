@@ -110,6 +110,15 @@ meeting_1 = Meeting.create(
 
 puts 'Meetings created'
 
+# Create Lists for each user
+users.each do |user|
+  # Create 3 lists for each user
+  ['TBR', 'Currently Reading', 'Read'].each do |list_name|
+    List.create(name: list_name, user: user)
+  end
+end
+puts 'Lists created'
+
 
 # Create Progresses
 # users.each do |user|

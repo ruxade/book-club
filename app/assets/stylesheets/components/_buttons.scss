@@ -14,7 +14,7 @@
   min-width: 100px;
     min-height: 40px;
     border-radius: 20px;
-    box-shadow: 4px 6px 13px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 13px rgba(0, 0, 0, 0.2);
     border: 0px solid rgba(105, 105, 105, 0.397);
 }
 .btn-primary {
@@ -27,6 +27,12 @@
   background-color: $accent2;
   color: $text;
 
+}
+
+.btn-new{
+  background-color: $yellow;
+  color: $text;
+  width: 100%;
 }
 
 
@@ -42,4 +48,9 @@ input {
   border-radius: 20px;
   min-height: 40px;
   padding: 5px;
+}
+
+.field {
+ 
+  padding: 10px;
 }

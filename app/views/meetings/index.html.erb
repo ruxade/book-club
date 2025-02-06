@@ -8,7 +8,7 @@
         <p class="book-title"><%= meeting.book.title.upcase %></p>
         <p class="date"><%= meeting.date.strftime("%d/%m/%y") %></p>
       <!-- Show button to go to the meeting's show page -->
-      <%= link_to 'More', meeting_path(meeting), class: 'btn btn-secondary' %>
+      <%= link_to 'More', meeting_path(meeting), class: 'btn btn-tertiary' %>
       </div>
 
 
@@ -21,4 +21,9 @@
   <% end %>
 </div>
 
+<div class = "buttons">
+  <%= link_to 'New Meeting', new_meeting_path, class: 'btn btn-new' %>
+
+
+</div>
 </div>

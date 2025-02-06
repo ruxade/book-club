@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_02_06_161238) do
+ActiveRecord::Schema[7.1].define(version: 2025_02_06_172439) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,6 +67,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_06_161238) do
     t.string "cover_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["list_id"], name: "index_list_books_on_list_id"
   end
 
