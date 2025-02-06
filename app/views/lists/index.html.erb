@@ -2,16 +2,18 @@
   <h2 class="page-title">Lists</h2>
 
   <div class="list-index">
-    <% @lists.each do |list| %>
-      <div class="list-item">
-        <h3><%= list.name %></h3>
-
-        <h1><%= list.books.count %></h1>
-
-        <%= link_to list_path(list), class: "btn btn-primary" do %> <!-- Un-commented the button link -->
-          View List
-        <% end %>
-      </div>
+    <% if @lists.any? %>
+      <% @lists.each do |list| %>
+        <div class="list-item">
+          <h3><%= list.name %></h3>
+          <h1><%= list.books.count %></h1>
+          <%= link_to list_path(list), class: "btn btn-primary" do %>
+            View List
+          <% end %>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No lists found for <%= @current_user.email %></p>
     <% end %>
   </div>
 </div>

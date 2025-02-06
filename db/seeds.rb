@@ -112,11 +112,11 @@ puts 'Meetings created'
 
 # Create Lists for each user
 users.each do |user|
-  # Create 3 lists for each user
-  ['TBR', 'Currently Reading', 'Read'].each do |list_name|
-    List.create(name: list_name, user: user)
-  end
+  user.lists.create(name: 'TBR')
+  user.lists.create(name: 'Currently Reading')
+  user.lists.create(name: 'Read')
 end
+
 puts 'Lists created'
 
 

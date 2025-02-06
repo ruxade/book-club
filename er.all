@@ -1,0 +1,82 @@
+=> 
+[[32m#<List:0x00007f34ba764be8[0m
+  id: [34m[1m17[0m,
+  name: [31m[1m"[0m[31mTBR[0m[31m[1m"[0m,
+  user_id: [34m[1m116[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.067898000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.067898000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a3278[0m
+  id: [34m[1m18[0m,
+  name: [31m[1m"[0m[31mCurrently Reading[0m[31m[1m"[0m,
+  user_id: [34m[1m116[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.076200000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.076200000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a2fa8[0m
+  id: [34m[1m19[0m,
+  name: [31m[1m"[0m[31mRead[0m[31m[1m"[0m,
+  user_id: [34m[1m116[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.092446000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.092446000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a2ee0[0m
+  id: [34m[1m20[0m,
+  name: [31m[1m"[0m[31mTBR[0m[31m[1m"[0m,
+  user_id: [34m[1m117[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.103299000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.103299000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a2cd8[0m
+  id: [34m[1m21[0m,
+  name: [31m[1m"[0m[31mCurrently Reading[0m[31m[1m"[0m,
+  user_id: [34m[1m117[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.112787000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.112787000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a2a30[0m
+  id: [34m[1m22[0m,
+  name: [31m[1m"[0m[31mRead[0m[31m[1m"[0m,
+  user_id: [34m[1m117[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.122242000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.122242000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a28a0[0m
+  id: [34m[1m23[0m,
+  name: [31m[1m"[0m[31mTBR[0m[31m[1m"[0m,
+  user_id: [34m[1m118[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.129017000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.129017000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a25a8[0m
+  id: [34m[1m24[0m,
+  name: [31m[1m"[0m[31mCurrently Reading[0m[31m[1m"[0m,
+  user_id: [34m[1m118[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.141346000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.141346000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a2328[0m
+  id: [34m[1m25[0m,
+  name: [31m[1m"[0m[31mRead[0m[31m[1m"[0m,
+  user_id: [34m[1m118[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.147651000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.147651000 UTC +00:00[32m>[0m,
+ [32m#<List:0x00007f34ba0a2170[0m
+  id: [34m[1m26[0m,
+  name: [31m[1m"[0m[31mTBR[0m[31m[1m"[0m,
+  user_id: [34m[1m119[0m,
+  created_at:
+   Thu, 06 Feb 2025 17:32:00.153996000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 17:32:00.153996000 UTC +00:00[32m>[0m,
+ [31m[1m"[0m[31m...[0m[31m[1m"[0m]
