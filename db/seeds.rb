@@ -22,11 +22,11 @@ puts "Users, Lists, Clubs, and Meetings destroyed"
 
 # Create Users
 users = User.create([
-  { email: 'adelina@example.com', password: 'password' },
-  { email: 'lisa@example.com', password: 'password' },
-  { email: 'ioana@example.com', password: 'password' },
-  { email: 'anna@example.com', password: 'password' },
-  { email: 'xiao@example.com', password: 'password' }
+  { email: 'adelina@example.com', password: 'password', name: 'Adelina' },
+  { email: 'lisa@example.com', password: 'password', name: 'Lisa' },
+  { email: 'ioana@example.com', password: 'password', name: 'Ioana' },
+  { email: 'anna@example.com', password: 'password', name: 'Anna' },
+  { email: 'xiao@example.com', password: 'password', name: 'Xiao' }
 ])
 puts 'Users created'
 

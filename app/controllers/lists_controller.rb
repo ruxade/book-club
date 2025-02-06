@@ -12,19 +12,38 @@ class ListsController < ApplicationController
   end
 
   def new
-    @list = current_user.lists.build
+    @list = current_user.lists.new
   end
 
   def create
-    @list = current_user.lists.build(list_params)
+    @list = current_user.lists.new(list_params)
     if @list.save
-      redirect_to lists_path, notice: "List created successfully!"
+      redirect_to @list, notice: 'List created successfully'
     else
-      flash.now[:alert] = "Error creating list. Please try again."
       render :new
     end
   end
 
+  def edit
+    @list = current_user.lists.find(params[:id])
+  end
+
+  def update
+    @list = current_user.lists.find(params[:id])
+    if @list.update(list_params)
+      redirect_to @list, notice: 'List updated successfully'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @list = current_user.lists.find(params[:id])
+    @list.destroy
+    redirect_to lists_path, notice: 'List deleted successfully'
+  end
+
+  
   private
 
   def list_params
