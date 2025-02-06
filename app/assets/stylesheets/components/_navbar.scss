@@ -2,6 +2,7 @@
 @mixin flex-center {
   display: flex;
   align-items: flex-end;
+
 }
 
 .navbar {
@@ -13,6 +14,7 @@
   @include flex-center;
   text-align: center;
   box-shadow: inset 1em 1em 10px 0px #81818173;
+  // box-shadow:1px -10px 10px rgba(0, 0, 0, 0.3);
   border-bottom: solid 8px $yellow;
 
   .navbar-brand {
@@ -30,21 +32,22 @@
 
   .navbar-collapse {
     .bookshelf {
-      justify-content: space-evenly;
       display: flex;
+      justify-content: space-evenly;
       gap: 1px;
     }
+
   }
 }
 
 // Book sizes
 .book-s, .book-m, .book-l, .ro90 {
-  border: solid 5px #3A5154;
+  border: solid 5px $yellow;
   box-shadow: 2px -4px 3px 3px rgba(58, 58, 58, 0.2);
 }
 
 .book-s { height: 35px; }
-.book-m { height: 45px; border: solid 7px #3A5154; }
+.book-m { height: 45px; border: solid 7px $yellow; }
 .book-l { height: 50px; }
 .ro90 {
   width: 40px;
@@ -77,6 +80,7 @@
   background-color: none;
   cursor: pointer;
 }
+
 
 // Search bar
 #search {
