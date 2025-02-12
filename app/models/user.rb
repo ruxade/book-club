@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :clubs, through: :user_clubs
   has_many :list_book
   has_many :lists, through: :list_book
+  has_many :reviews, dependent: :destroy
 end
