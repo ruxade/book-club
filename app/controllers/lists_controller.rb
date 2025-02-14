@@ -45,6 +45,27 @@ class ListsController < ApplicationController
   end
 
 
+  def add_book
+    list = current_user.lists.find(params[:list_id])
+    book_params = params.require(:book).permit(:google_id, :title, :cover_url, :overview)
+
+    @book = Book.find_or_create_by(google_id: book_params[:google_id]) do |book|
+      book.title = book_params[:title]
+      book.cover_url = book_params[:cover_url]
+      book.overview = book_params[:overview]
+    end
+
+    if list.books.exists?(@book.id)
+      flash[:alert] = "Book already exists in the list."
+    else
+      list.books << @book
+      flash[:notice] = "Book added successfully!"
+    end
+
+    redirect_to list_path(list)
+  end
+
+
   private
 
   def list_params

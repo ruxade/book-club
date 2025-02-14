@@ -5,9 +5,13 @@
  <% @books.each do |book| %>
     <div class="book-item">
       <h4><%= book.title %></h4>
-      <p><%= book.author %></p>
+      <p><%= book.authors %></p>
       <img src="<%= book.cover_url %>" alt="<%= book.title %> cover">
     </div>
   <% end %>
 </div>
+
+
+
+
 <%= link_to "Back to Lists", lists_path, class: "btn btn-primary " %>

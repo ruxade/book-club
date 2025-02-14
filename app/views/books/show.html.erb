@@ -1,9 +1,28 @@
 <div class ="show-container" id = "book-page">
 
-<div class = "buttons mt-1">
+<div class="buttons mt-1">
   <%= link_to "Back to Search", books_path, class: "btn btn-secondary" %>
-  <%= link_to "Add to list", books_path, class: "btn btn-secondary" %>
+
+
+  <% if @lists.any? %>
+    <%= form_with url: add_book_to_list_path, method: :post, local: true do |f| %>
+      <div class="form-group mb-2">
+        <%= f.label :list_id, "Select a List" %>
+        <%= f.select :list_id, options_from_collection_for_select(@lists, :id, :name), {}, class: "form-control" %>
+      </div>
+      <%= hidden_field_tag "book[google_id]", @book[:id] %>
+      <%= hidden_field_tag "book[title]", @book[:title] %>
+      <%= hidden_field_tag "book[cover_url]", @book[:cover_url] %>
+      <%= hidden_field_tag "book[overview]", @book[:description] || "No description available." %>
+
+      <%= f.submit "Add Book to List", class: "btn btn-primary" %>
+    <% end %>
+  <% else %>
+    <p>You don't have any lists yet. <%= link_to "Create one", new_list_path %></p>
+  <% end %>
 </div>
+
+
 
 
 <div class= "line"></div>

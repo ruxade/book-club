@@ -14,6 +14,7 @@ end
   def show
     if params[:google_id].present?
       @book = GoogleBooksService.find_book(params[:google_id])
+      @lists = current_user.lists
     else
       redirect_to books_path, alert: "Book not found."
     end

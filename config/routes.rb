@@ -28,8 +28,10 @@ Rails.application.routes.draw do
   resources :meetings, only: [:index,:new, :create, :show]
 
 
-  resources :lists 
-
+  resources :lists do
+    post 'add_book', on: :member
+  end
+  post '/lists/add_book', to: 'lists#add_book', as: 'add_book_to_list'
 
 
   # Defines the root path route ("/")
