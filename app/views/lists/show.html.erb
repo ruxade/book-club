@@ -1,17 +1,34 @@
-<h2><%= @list.name %></h2>
+
+
+<div class="list-container">
+  <h2><%= @current_user.name%>'s <%= @list.name %></h2>
 <p>Books in this list:</p>
 
-<div class="book-list">
- <% @books.each do |book| %>
-    <div class="book-item">
-      <h4><%= book.title %></h4>
-      <p><%= book.authors %></p>
-      <img src="<%= book.cover_url %>" alt="<%= book.title %> cover">
-    </div>
-  <% end %>
-</div>
+  <div class="books-container">
+    <% @books.each do |book| %>
+      <div class="book-card">
+        <div class="book-cover">
+          <% if book[:cover_url] %>
+            <img src="<%= book[:cover_url] %>" alt="<%= book[:title] %> cover" class="book-image">
+          <% else %>
+            <div class="book-image-placeholder"></div>
+          <% end %>
+        </div>
+        <div class="book-info">
+          <h4><%= book[:title] %></h4>
+          <p><strong>Author:</strong> <%= book[:authors] %></p>
+                    <p>Published: <%= book[:publication_year] %></p>
+           <% if book[:average_rating].present? && book[:average_rating] != "No rating"  %>
+           <p> <strong>Rating:</strong> <%= book[:average_rating] %> / 5</p>
+           <% end %>
+          <%# <%= link_to "View Details", book_path(book[:google_id]), class: "view-details" %> %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
 
 
 
 <%= link_to "Back to Lists", lists_path, class: "btn btn-primary " %>
+</div>

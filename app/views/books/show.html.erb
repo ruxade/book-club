@@ -10,7 +10,7 @@
         <%= f.label :list_id, "Select a List" %>
         <%= f.select :list_id, options_from_collection_for_select(@lists, :id, :name), {}, class: "form-control" %>
       </div>
-      <%= hidden_field_tag "book[google_id]", @book[:id] %>
+      <%= hidden_field_tag "book[google_id]", @book[:google_id] %>
       <%= hidden_field_tag "book[title]", @book[:title] %>
       <%= hidden_field_tag "book[cover_url]", @book[:cover_url] %>
       <%= hidden_field_tag "book[overview]", @book[:description] || "No description available." %>
