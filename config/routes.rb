@@ -28,9 +28,9 @@ Rails.application.routes.draw do
   resources :meetings, only: [:index,:new, :create, :show]
 
 
-  resources :lists do
-    resources :list_books, only: [:index, :create, :destroy]
-  end
+  resources :lists 
+
+
 
   # Defines the root path route ("/")
   # root "posts#index"

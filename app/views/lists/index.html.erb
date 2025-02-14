@@ -15,5 +15,7 @@
     <% else %>
       <p>No lists found for <%= @current_user.name %></p>
     <% end %>
+
+    <%= link_to "New List", new_list_path, class: "btn btn-secondary" %>
   </div>
 </div>

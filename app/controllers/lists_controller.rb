@@ -18,9 +18,10 @@ class ListsController < ApplicationController
   def create
     @list = current_user.lists.new(list_params)
     if @list.save
-      redirect_to @list, notice: 'List created successfully'
+      redirect_to lists_path, notice: 'List created successfully'
     else
-      render :new
+      Rails.logger.debug "List errors: #{@list.errors.full_messages}"
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -33,7 +34,7 @@ class ListsController < ApplicationController
     if @list.update(list_params)
       redirect_to @list, notice: 'List updated successfully'
     else
-      render :edit
+      render :new, status: :unprocessable_entity
     end
   end
 
