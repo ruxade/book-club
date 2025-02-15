@@ -1,0 +1,22 @@
+.alert {
+  position: fixed;
+  align-items: center;
+  top: 100px;
+  // bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  background-color: $accent;
+  animation: disappear 5s  forwards;
+  animation-delay: 2s;
+}
+
+
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

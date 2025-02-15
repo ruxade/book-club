@@ -3,24 +3,25 @@
 <div class="buttons mt-1">
   <%= link_to "Back to Search", books_path, class: "btn btn-secondary" %>
 
-
   <% if @lists.any? %>
-    <%= form_with url: add_book_to_list_path, method: :post, local: true do |f| %>
+    <%= form_tag add_book_to_list_path, method: :post, local: true do %>
       <div class="form-group mb-2">
-        <%= f.label :list_id, "Select a List" %>
-        <%= f.select :list_id, options_from_collection_for_select(@lists, :id, :name), {}, class: "form-control" %>
+        <%= label_tag :list_id, "Select a List" %>
+        <%= select_tag :list_id, options_from_collection_for_select(@lists, :id, :name), class: "form-control" %>
       </div>
-      <%= hidden_field_tag "book[google_id]", @book[:google_id] %>
+
+      <%= hidden_field_tag "book[google_id]", @book[:id] %>
       <%= hidden_field_tag "book[title]", @book[:title] %>
       <%= hidden_field_tag "book[cover_url]", @book[:cover_url] %>
-      <%= hidden_field_tag "book[overview]", @book[:description] || "No description available." %>
+      <%= hidden_field_tag "book[overview]", @book[:overview] || "No description available." %>
 
-      <%= f.submit "Add Book to List", class: "btn btn-primary" %>
+      <%= submit_tag "Add Book to List", class: "btn btn-primary" %>
     <% end %>
   <% else %>
     <p>You don't have any lists yet. <%= link_to "Create one", new_list_path %></p>
   <% end %>
 </div>
+
 
 
 
